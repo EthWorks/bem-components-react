@@ -1,0 +1,52 @@
+{
+  "name": "bem-components-react",
+  "version": "0.1.0",
+  "description": "Builder for react components that follow BEM methodology",
+  "main": "dist/cjs/index.js",
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build:cjs": "tsc --outDir dist/cjs",
+    "build:esm": "tsc --outDir dist/esm",
+    "build": "rm -rf dist && yarn build:cjs && yarn build:esm",
+    "test": "mocha -r ts-node/register -r ./test/register.ts \"test/**/*.test.ts\"",
+    "prepublishOnly": "yarn build"
+  },
+  "keywords": [
+    "bem",
+    "components",
+    "react",
+    "css",
+    "styled-components",
+    "styles"
+  ],
+  "files": [
+    "package.json",
+    "dist",
+    "src",
+    "Unlicense",
+    "README.md"
+  ],
+  "author": "Dmytro Maretskyi <maretskii@gmail.com>",
+  "license": "Unlicense",
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.4",
+    "@types/sinon-chai": "^3.2.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.2",
+    "sinon-chai": "^3.3.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.20",
+    "@types/react-dom": "^16.9.5"
+  }
+}
