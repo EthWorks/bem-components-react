@@ -30,6 +30,10 @@
   ],
   "author": "Dmytro Maretskyi <maretskii@gmail.com>",
   "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Marik-D/bem-components-react.git"
+  },
   "peerDependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
