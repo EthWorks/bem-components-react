@@ -1,5 +1,5 @@
-import { bindBuilderFactoryToJsx } from "./jsx";
-import { createPrefixedBuilder } from "./builder";
+import {bindBuilderFactoryToJsx} from './jsx'
+import {createPrefixedBuilder} from './builder'
 
 export const styled = bindBuilderFactoryToJsx(createPrefixedBuilder())
 
