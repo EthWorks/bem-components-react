@@ -1,12 +1,16 @@
 export function getClassName(
-  componentName: string,
-  modifiers: readonly string[],
+  block: string,
+  modifiers: Record<string, string>,
   props: Record<string, any>,
 ) {
-  const enabledModifiers = modifiers.filter(mod => !!props[mod])
-  return [
-    componentName,
-    ...enabledModifiers.map(mod => `${componentName}--${mod}`),
-    ...(props.className ? [props.className] : []),
-  ].join(' ')
+  const className = [block]
+  for (const key in modifiers) {
+    if (props[key]) {
+      className.push(modifiers[key])
+    }
+  }
+  if (props.className) {
+    className.push(props.className)
+  }
+  return className.join('')
 }
