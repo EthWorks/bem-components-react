@@ -1,6 +1,6 @@
 {
   "name": "bem-components-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Builder for react components that follow BEM methodology",
   "main": "dist/cjs/index.js",
   "types": "dist/esm/index.d.ts",
