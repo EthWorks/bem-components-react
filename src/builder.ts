@@ -52,8 +52,8 @@ export type ComponentFactory<P> = (props: P) => ReactElement<any>
 export type BuilderFactory = <P extends ComponentProps>(factory: ComponentFactory<P>) => StyledComponentBuilder<P>
 
 export function createPrefixedBuilder(prefix?: string): BuilderFactory {
-  return function builder (factory) {
-    return function styled (block: string, modifiers: string[] = []) {
+  return function builder(factory) {
+    return function styled(block: string, modifiers: string[] = []) {
       const blockClass = prefixComponentName(block, prefix)
       const modifierMap: Record<string, string> = {}
       for (const modifier of modifiers) {
