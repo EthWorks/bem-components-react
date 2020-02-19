@@ -1,6 +1,6 @@
 {
   "name": "bem-components-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Builder for react components that follow BEM methodology",
   "main": "dist/cjs/index.js",
   "types": "dist/esm/index.d.ts",
@@ -35,27 +35,25 @@
     "url": "git://github.com/Marik-D/bem-components-react.git"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react": "~16"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.4",
     "@types/sinon-chai": "^3.2.3",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "mocha": "^6.2.0",
     "sinon": "^7.4.2",
     "sinon-chai": "^3.3.0",
     "ts-node": "^8.6.2",
-    "typescript": "^3.7.5",
-    "eslint": "^6.1.0",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "eslint-plugin-react": "^7.14.3"
+    "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@types/react": "^16.9.20",
-    "@types/react-dom": "^16.9.5"
+    "@types/react": "~16"
   }
 }
