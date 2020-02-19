@@ -35,7 +35,7 @@
     "url": "git://github.com/Marik-D/bem-components-react.git"
   },
   "peerDependencies": {
-    "react": "~16"
+    "react": "*"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -54,6 +54,6 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@types/react": "~16"
+    "@types/react": "*"
   }
 }
