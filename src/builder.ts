@@ -55,10 +55,7 @@ export function createPrefixedBuilder(prefix?: string): BuilderFactory {
   return function builder(factory) {
     return function styled(block: string, modifiers: string[] = []) {
       const blockClass = prefixComponentName(block, prefix)
-      const modifierMap: Record<string, string> = {}
-      for (const modifier of modifiers) {
-        modifierMap[modifier] = `${blockClass}--${modifier}`
-      }
+      const modifierMap = prepareModifierMap(modifiers, blockClass)
 
       return (props: any) => factory({
         ...props,
@@ -66,6 +63,14 @@ export function createPrefixedBuilder(prefix?: string): BuilderFactory {
       })
     }
   }
+}
+
+function prepareModifierMap(modifiers: string[], blockClass: string) {
+  const modifierMap: Record<string, string> = {}
+  for (const modifier of modifiers) {
+    modifierMap[modifier] = `${blockClass}--${modifier}`
+  }
+  return modifierMap
 }
 
 function prefixComponentName(componentName: string, prefix: string | undefined) {
