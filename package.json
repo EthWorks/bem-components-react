@@ -32,7 +32,7 @@
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Marik-D/bem-components-react.git"
+    "url": "git://github.com/EthWorks/bem-components-react.git"
   },
   "peerDependencies": {
     "react": "*"
