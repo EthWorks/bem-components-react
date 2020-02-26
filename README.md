@@ -15,10 +15,10 @@ Installation:
 Usage:
 
 ```jsx
-import { styled } from 'bem-components-react'
+import { bem } from 'bem-components-react'
 
 // specify a class name and a list of variants afterwards
-const Button = styled.button('button', ['large', 'small']) 
+const Button = bem.button('button', ['large', 'small']) 
 
 function MyComponent() {
   return <Button large>Click me</Button>
@@ -36,13 +36,13 @@ This component will render to:
 
 ```jsx
 // omit the second argument if the component doesn't have any modifiers
-const Button = styled.button('button')
+const Button = bem.button('button')
 
 // specify an array of variants as a second argument
-const Button = styled.button('button', ['large', 'small']) 
+const Button = bem.button('button', ['large', 'small']) 
 
 // nest elements inside blocks by specifying it in the name
-const Input = styled.button('dialog__input', ['error'])
+const Input = bem.button('dialog__input', ['error'])
 
 // to enable a variant, pass a prop to the created component
 <Button large>Click me</Button>
@@ -60,9 +60,9 @@ const Input = styled.button('dialog__input', ['error'])
 
 ```jsx
 import { withPrefix } from 'bem-components-react'
-const styled = withPrefix('myapp')
+const bem = withPrefix('myapp')
 
-const Button = styled.button('button', ['large', 'small']) 
+const Button = bem.button('button', ['large', 'small']) 
 ```
 
 Will render to:
