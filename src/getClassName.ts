@@ -12,5 +12,5 @@ export function getClassName(
   if (props.className) {
     className.push(props.className)
   }
-  return className.join('')
+  return className.join(' ')
 }

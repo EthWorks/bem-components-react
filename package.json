@@ -9,7 +9,7 @@
     "build:cjs": "tsc --outDir dist/cjs",
     "build:esm": "tsc --outDir dist/esm",
     "build": "rm -rf dist && yarn build:cjs && yarn build:esm",
-    "test": "mocha -r ts-node/register -r ./test/register.ts \"test/**/*.test.ts\"",
+    "test": "mocha -r ts-node/register \"test/**/*.test.ts\"",
     "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
     "prepublishOnly": "yarn build"
   },
