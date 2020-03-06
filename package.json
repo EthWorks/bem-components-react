@@ -6,8 +6,8 @@
   "types": "dist/esm/index.d.ts",
   "module": "dist/esm/index.js",
   "scripts": {
-    "build:cjs": "tsc -p tsconfig.build.json --outDir dist/cjs",
-    "build:esm": "tsc -p tsconfig.build.json --outDir dist/esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "build": "rm -rf dist && yarn build:cjs && yarn build:esm",
     "test": "mocha -r ts-node/register \"test/**/*.test.{ts,tsx}\"",
     "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
