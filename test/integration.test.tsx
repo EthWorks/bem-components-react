@@ -49,6 +49,10 @@ describe('integration', () => {
       const wrapper = shallow(<Component className="foo" />)
       expect(wrapper.find('div').prop('className')).to.eq('app-component foo')
     })
-  
+  })
+
+  it('does not pass modifiers downstream', () => {
+    const wrapper = shallow(<Component large />)
+    expect(wrapper.find('div').prop('large')).to.eq(undefined)
   })
 })

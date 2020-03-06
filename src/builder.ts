@@ -1,5 +1,6 @@
 import {FunctionComponent, ReactElement} from 'react'
 import {getClassName} from './getClassName'
+import {removeKeys} from './removeKeys'
 
 type PropsOf<T extends readonly string[]> = { [K in T[number]]?: boolean }
 
@@ -58,7 +59,7 @@ export function createPrefixedBuilder(prefix?: string): BuilderFactory {
       const modifierMap = prepareModifierMap(modifiers, blockClass)
 
       return (props: any) => factory({
-        ...props,
+        ...(removeKeys(props, modifiers)),
         className: getClassName(blockClass, modifierMap, props),
       })
     }
