@@ -1,10 +1,10 @@
 import React from 'react'
-import { bem, withPrefix } from '../src'
-import { configure, shallow } from 'enzyme'
-import { expect } from 'chai'
-import Adapter from 'enzyme-adapter-react-16';
+import {bem, withPrefix} from '../src'
+import {configure, shallow} from 'enzyme'
+import {expect} from 'chai'
+import Adapter from 'enzyme-adapter-react-16'
 
-configure({ adapter: new Adapter() });
+configure({adapter: new Adapter()})
 
 describe('integration', () => {
   const Component = bem.div('component', ['large', 'small'])
@@ -27,7 +27,6 @@ describe('integration', () => {
   it('extra className', () => {
     const wrapper = shallow(<Component className="foo" />)
     expect(wrapper.find('div').prop('className')).to.eq('component foo')
-
   })
 
   describe('withPrefix', () => {
@@ -37,9 +36,8 @@ describe('integration', () => {
     it('no modifiers', () => {
       const wrapper = shallow(<Component />)
       expect(wrapper.find('div').prop('className')).to.eq('app-component')
-
     })
-  
+
     it('one enabled modifier', () => {
       const wrapper = shallow(<Component large />)
       expect(wrapper.find('div').prop('className')).to.eq('app-component app-component--large')
